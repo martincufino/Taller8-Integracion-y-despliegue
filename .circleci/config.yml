@@ -28,8 +28,8 @@ jobs:
       - run:
           name: Deploy to Railway App
           command: |
-            cd bankchurn-api
-            railway up --service=pacific-clarity
+            railway login --token $RAILWAY_TOKEN
+            railway up --service=taller8-integracion
             railway up --detach
 
 
