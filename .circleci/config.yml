@@ -23,12 +23,12 @@ jobs:
           path: ~/project/
       - node/install:
           node-version: '20.9'
-      - run: node --version 
+      - run: node --version
       - run: npm i -g @railway/cli
       - run:
           name: Deploy to Railway App
           command: |
-            railway login --token $RAILWAY_TOKEN
+            cd bankchurn-api
             railway up --service=taller8-integracion
             railway up --detach
 
